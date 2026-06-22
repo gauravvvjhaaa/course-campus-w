@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Campus - Learn. Grow. Succeed</title>
+  <meta name="description" content="NIOS 10th and 12th admission in New Delhi. Course Campus is a registered NIOS study centre in Sangam Vihar. Enroll now for April/October exams.">
+  <meta name="keywords" content="NIOS admission Delhi, NIOS 10th 12th, NIOS study centre Sangam Vihar, NIOS registration, Course Campus NIOS">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ---- NIOS Page Specific ---- */
+    .nios-hero {
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      background: var(--bg);
+      overflow: hidden;
+    }
+    .nios-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 80% at 15% 40%, rgba(255, 211, 0, 0.07) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 60% at 85% 15%, rgba(255, 211, 0, 0.04) 0%, transparent 55%);
+      pointer-events: none;
+    }
+    .nios-hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 5% 60px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+      width: 100%;
+    }
+    .nios-hero-left { display: flex; flex-direction: column; gap: 20px; }
+
+    .nios-badge-row { display: flex; gap: 10px; flex-wrap: wrap; }
+    .badge-govt {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(255, 211, 0, 0.1); border: 1px solid rgba(255, 211, 0, 0.3);
+      color: var(--accent); font-size: 0.75rem; font-weight: 700;
+      padding: 5px 14px; border-radius: 100px; letter-spacing: 0.07em; text-transform: uppercase;
+    }
+    .badge-moe {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.12);
+      color: var(--muted); font-size: 0.72rem; font-weight: 600;
+      padding: 5px 14px; border-radius: 100px; letter-spacing: 0.05em;
+    }
+    .nios-hero-title {
+      font-size: clamp(2.6rem, 5.5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      color: var(--text);
+    }
+    .nios-hero-title .accent { color: var(--accent); }
+    .nios-hero-tagline {
+      font-style: italic;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.01em;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .nios-hero-tagline::before { content: '✦'; font-style: normal; font-size: 0.8rem; }
+    .nios-hero-tagline::after  { content: '✦'; font-style: normal; font-size: 0.8rem; }
+    .nios-hero-sub { color: var(--muted); font-size: 0.98rem; line-height: 1.65; max-width: 500px; }
+    .nios-hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 4px; }
+    .btn-nios-primary {
+      background: var(--accent); color: #090C11;
+      font-weight: 800; font-size: 0.95rem; padding: 13px 28px;
+      border-radius: 10px; border: 2px solid var(--accent);
+      cursor: pointer; transition: all .2s ease;
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'Inter', sans-serif;
+    }
+    .btn-nios-primary:hover { background: #ffe033; border-color: #ffe033; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255,211,0,.35); }
+    .btn-nios-call {
+      background: transparent; color: var(--text);
+      font-weight: 700; font-size: 0.95rem; padding: 13px 24px;
+      border-radius: 10px; border: 2px solid var(--border);
+      cursor: pointer; transition: all .2s ease;
+      display: inline-flex; align-items: center; gap: 8px;
+      text-decoration: none; font-family: 'Inter', sans-serif;
+    }
+    .btn-nios-call:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+
+    /* Hero right: stat cards */
+    .nios-hero-right { display: flex; flex-direction: column; gap: 14px; }
+    .nios-stat-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 14px; padding: 20px 24px;
+      display: flex; align-items: center; gap: 16px;
+      transition: border-color .25s;
+    }
+    .nios-stat-card:hover { border-color: rgba(255,211,0,.25); }
+    .nios-stat-icon { font-size: 1.8rem; flex-shrink: 0; }
+    .nios-stat-card .stat-title { font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 3px; }
+    .nios-stat-card .stat-desc  { font-size: 0.8rem; color: var(--muted); line-height: 1.4; }
+    .nios-stat-card .stat-num-big { font-size: 1.8rem; font-weight: 800; color: var(--accent); line-height: 1; }
+
+    /* ---- What is NIOS ---- */
+    .nios-section { padding: 80px 5%; }
+    .nios-what-card {
+      max-width: 900px; margin: 0 auto;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 20px; padding: 48px;
+      position: relative; overflow: hidden;
+    }
+    .nios-what-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, var(--accent) 0%, #ff8c00 100%);
+    }
+    .nios-what-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 32px; align-items: start;
+    }
+    .nios-what-left h3 { font-size: 1.4rem; font-weight: 800; color: var(--text); margin-bottom: 14px; }
+    .nios-what-left h3 span { color: var(--accent); }
+    .nios-what-left p { color: var(--muted); font-size: 0.9rem; line-height: 1.7; margin-bottom: 12px; }
+    .nios-what-right { display: flex; flex-direction: column; gap: 10px; }
+    .nios-fact {
+      display: flex; align-items: flex-start; gap: 10px;
+      background: rgba(255,211,0,.06); border: 1px solid rgba(255,211,0,.15);
+      border-radius: 10px; padding: 12px 16px;
+    }
+    .nios-fact .fact-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+    .nios-fact .fact-text { font-size: 0.84rem; color: var(--muted); line-height: 1.45; }
+    .nios-fact .fact-text strong { color: var(--text); display: block; margin-bottom: 2px; font-size: 0.87rem; }
+
+    /* ---- Pathway Cards ---- */
+    .pathway-section { padding: 0 5% 80px; }
+    .pathway-wrapper { max-width: 900px; margin: 0 auto; }
+    .pathway-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+    .pathway-card {
+      border-radius: 18px; padding: 36px 28px;
+      position: relative; overflow: hidden;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .pathway-card:hover { transform: translateY(-6px); }
+    .pathway-card.red {
+      background: linear-gradient(135deg, #1f0d0d 0%, #1a1010 100%);
+      border: 1px solid rgba(255, 80, 80, 0.3);
+    }
+    .pathway-card.red::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, #ff4444, #ff6b35);
+    }
+    .pathway-card.green {
+      background: linear-gradient(135deg, #0a1f0d 0%, #0c1a0e 100%);
+      border: 1px solid rgba(80, 200, 80, 0.3);
+    }
+    .pathway-card.green::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, #22c55e, #16a34a);
+    }
+    .pathway-emoji { font-size: 2.2rem; margin-bottom: 14px; display: block; }
+    .pathway-question { font-size: 1rem; color: var(--muted); margin-bottom: 8px; font-weight: 500; }
+    .pathway-question strong { color: var(--text); font-weight: 700; }
+    .pathway-arrow {
+      font-size: 1.4rem; font-weight: 800; color: var(--text);
+      margin: 14px 0; display: flex; align-items: center; gap: 8px;
+    }
+    .pathway-card.red .pathway-arrow { color: #ff6b6b; }
+    .pathway-card.green .pathway-arrow { color: #4ade80; }
+    .pathway-outcome { font-size: 1.05rem; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+    .pathway-detail { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+    .pathway-badge {
+      text-align: center; margin-top: 4px;
+      background: rgba(255, 211, 0, 0.1);
+      border: 1px solid rgba(255, 211, 0, 0.3);
+      border-radius: 12px; padding: 14px 20px;
+    }
+    .pathway-badge span {
+      font-size: 1.15rem; font-weight: 800; color: var(--accent);
+      letter-spacing: 0.01em;
+    }
+
+    /* ---- How We Help ---- */
+    .help-section { padding: 0 5% 80px; background: var(--bg); }
+    .help-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 16px; max-width: 1000px; margin: 0 auto;
+    }
+    .help-box {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 14px; padding: 28px 20px;
+      text-align: center; transition: all .25s ease;
+    }
+    .help-box:hover { border-color: rgba(255,211,0,.3); transform: translateY(-5px); box-shadow: 0 12px 36px rgba(0,0,0,.35); }
+    .help-icon { font-size: 2rem; margin-bottom: 14px; }
+    .help-box h4 { font-size: 0.9rem; font-weight: 700; color: var(--text); margin-bottom: 8px; line-height: 1.3; }
+    .help-box p { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+
+    /* ---- IGNOU Section ---- */
+    .ignou-section { padding: 0 5% 80px; }
+    .ignou-inner {
+      max-width: 900px; margin: 0 auto;
+      background: linear-gradient(135deg, #0f1520 0%, #131b28 100%);
+      border: 1px solid rgba(255,211,0,.15);
+      border-radius: 20px; padding: 48px;
+    }
+    .ignou-header { text-align: center; margin-bottom: 36px; }
+    .ignou-header .ignou-logo-text {
+      font-size: 1.4rem; font-weight: 800; color: var(--accent); margin-bottom: 6px;
+    }
+    .ignou-header p { color: var(--muted); font-size: 0.88rem; }
+    .ignou-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .ignou-card {
+      background: rgba(255,255,255,.04); border: 1px solid var(--border);
+      border-radius: 12px; padding: 24px;
+      transition: all .25s ease;
+    }
+    .ignou-card:hover { border-color: rgba(255,211,0,.25); background: rgba(255,211,0,.04); }
+    .ignou-card-icon { font-size: 1.6rem; margin-bottom: 12px; }
+    .ignou-card h4 { font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .ignou-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.55; }
+    .ignou-list { margin-top: 10px; display: flex; flex-direction: column; gap: 5px; }
+    .ignou-list li { font-size: 0.8rem; color: var(--muted); padding-left: 0; display: flex; align-items: center; gap: 6px; }
+    .ignou-list li::before { content: '✓'; color: var(--accent); font-weight: 700; font-size: 0.75rem; flex-shrink: 0; }
+
+    /* ---- Why NIOS ---- */
+    .why-nios-section { padding: 0 5% 80px; }
+    .why-nios-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 14px; max-width: 900px; margin: 0 auto;
+    }
+    .why-nios-item {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; padding: 20px 18px;
+      display: flex; align-items: center; gap: 14px;
+      transition: all .25s ease;
+    }
+    .why-nios-item:hover { border-color: rgba(255,211,0,.25); transform: translateX(4px); }
+    .check-circle {
+      width: 36px; height: 36px; flex-shrink: 0;
+      background: rgba(255,211,0,.1); border: 2px solid rgba(255,211,0,.3);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      color: var(--accent); font-size: 0.85rem; font-weight: 800;
+    }
+    .why-nios-text h4 { font-size: 0.9rem; font-weight: 700; color: var(--text); margin-bottom: 3px; }
+    .why-nios-text p { font-size: 0.76rem; color: var(--muted); line-height: 1.4; }
+
+    /* ---- NIOS CTA ---- */
+    .nios-cta {
+      padding: 80px 5%;
+      background: linear-gradient(135deg, #0f1520 0%, #131b28 100%);
+      border-top: 1px solid rgba(255,211,0,.1);
+      text-align: center;
+    }
+    .nios-cta h2 { font-size: clamp(1.6rem, 4vw, 2.5rem); font-weight: 800; letter-spacing: -.03em; color: var(--text); margin-bottom: 10px; }
+    .nios-cta h2 span { color: var(--accent); }
+    .nios-cta .sub { color: var(--muted); font-size: .95rem; margin-bottom: 32px; }
+    .nios-cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px; }
+    .btn-cta-wa {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #25D366; color: #fff;
+      font-weight: 700; font-size: .95rem; padding: 13px 26px;
+      border-radius: 10px; text-decoration: none;
+      transition: all .2s ease;
+    }
+    .btn-cta-wa:hover { background: #1db954; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,211,102,.35); }
+    .cta-phone-row { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; }
+    .cta-phone-link {
+      display: flex; align-items: center; gap: 8px;
+      color: var(--text); font-weight: 700; font-size: 1rem;
+      text-decoration: none; transition: color .2s;
+    }
+    .cta-phone-link:hover { color: var(--accent); }
+    .cta-phone-link .ph-icon {
+      width: 34px; height: 34px;
+      background: rgba(255,211,0,.1); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .85rem;
+    }
+
+    /* ---- Mobile Responsive ---- */
+    @media (max-width: 768px) {
+      .nios-hero-inner { grid-template-columns: 1fr; gap: 32px; padding: 40px 5% 50px; }
+      .nios-what-grid { grid-template-columns: 1fr; }
+      .nios-what-card { padding: 28px 20px; }
+      .pathway-cards { grid-template-columns: 1fr; }
+      .help-grid { grid-template-columns: repeat(2, 1fr); }
+      .ignou-inner { padding: 28px 20px; }
+      .ignou-cards { grid-template-columns: 1fr; }
+      .why-nios-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .help-grid { grid-template-columns: 1fr 1fr; }
+      .why-nios-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <a href="index.html"><img src="assets/logo.png" alt="Course Campus" height="60"></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="nios.html">NIOS Support</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="career.html">Career Guidance</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="navbar-right">
+      <button class="btn-apply" onclick="openApplyModal('NIOS 10th')">Apply Now</button>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()">&#9776;</button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="nav-mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="nios.html">NIOS Support</a>
+    <a href="courses.html">Courses</a>
+    <a href="faq.html">FAQ</a>
+    <a href="career.html">Career Guidance</a>
+    <a href="contact.html">Contact</a>
+    <a href="#" class="btn-apply-mobile" onclick="openApplyModal('NIOS 10th'); return false;">Apply Now</a>
+  </div>
+
+  <!-- PAGE WRAPPER -->
+  <div class="page-wrapper" style="padding-top: 0;">
+    <main class="main-content">
+
+      <!-- ===== 1. HERO ===== -->
+      <section class="nios-hero">
+        <div class="nios-hero-inner">
+          <!-- Left -->
+          <div class="nios-hero-left">
+            <div class="nios-badge-row">
+              <span class="badge-govt">⭐ Government Recognized</span>
+              <span class="badge-moe">Ministry of Education, India</span>
+            </div>
+
+            <h1 class="nios-hero-title">
+              NIOS<br>
+              <span class="accent">Admission</span><br>
+              Open
+            </h1>
+
+            <p class="nios-hero-tagline">Learn Again. Rise Again.</p>
+
+            <p class="nios-hero-sub">
+              National Institute of Open Schooling (NIOS) is India's largest open board under the Ministry of Education. Failed or dropped out? No problem — you can clear your 10th or 12th directly through NIOS with our expert guidance.
+            </p>
+
+            <div class="nios-hero-btns">
+              <button class="btn-nios-primary" onclick="openApplyModal('NIOS 10th')">
+                🎓 Apply Now
+              </button>
+              <a href="tel:+918285919263" class="btn-nios-call">
+                📞 Call Now
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Quick stats -->
+          <div class="nios-hero-right fade-in">
+            <div class="nios-stat-card">
+              <div class="nios-stat-icon">🏛️</div>
+              <div>
+                <div class="stat-title">Govt. Recognized Board</div>
+                <div class="stat-desc">NIOS certificates are accepted for all government jobs, college admissions, and competitive exams.</div>
+              </div>
+            </div>
+            <div class="nios-stat-card">
+              <div class="nios-stat-icon">📅</div>
+              <div>
+                <div class="stat-title">On-Demand Exam Option</div>
+                <div class="stat-desc">On-demand exam option available. Give your exam any time of year without waiting for fixed schedules.</div>
+              </div>
+            </div>
+            <div class="nios-stat-card">
+              <div class="nios-stat-icon">🎯</div>
+              <div>
+                <div class="stat-title">Former NIOS Coordinator</div>
+                <div class="stat-desc">Guided by Ashu Sir — 7+ years experience and ex-NIOS Coordinator. Expert admission and exam support.</div>
+              </div>
+            </div>
+            <div class="nios-stat-card">
+              <div class="nios-stat-icon">✅</div>
+              <div>
+                <div class="stat-title">No Age Bar — Any Age Welcome</div>
+                <div class="stat-desc">Whether you're 16 or 60, NIOS accepts students of all ages. It's never too late to learn.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 2. WHAT IS NIOS ===== -->
+      <section class="nios-section" style="padding-bottom: 40px;">
+        <div class="section-header fade-in">
+          <div class="section-label">Understanding NIOS</div>
+          <h2 class="section-title">What is <span>NIOS?</span></h2>
+        </div>
+
+        <div class="nios-what-card fade-in fade-in-delay-1">
+          <div class="nios-what-grid">
+            <div class="nios-what-left">
+              <h3>National Institute of <span>Open Schooling</span></h3>
+              <p>NIOS (National Institute of Open Schooling) is an autonomous organisation under the <strong>Ministry of Education, Government of India</strong>. It is the world's largest open schooling board, providing flexible and affordable education to students across India.</p>
+              <p>NIOS certificates carry the same value as CBSE and State Board certificates and are accepted by all universities, government employers, and professional institutions in India.</p>
+              <p>It is specially designed for students who have failed, dropped out, or couldn't continue regular school due to personal, financial, or health reasons.</p>
+            </div>
+            <div class="nios-what-right">
+              <div class="nios-fact">
+                <span class="fact-icon">🏛️</span>
+                <div class="fact-text">
+                  <strong>Established: 1989</strong>
+                  Ministry of Education, Govt. of India
+                </div>
+              </div>
+              <div class="nios-fact">
+                <span class="fact-icon">🌏</span>
+                <div class="fact-text">
+                  <strong>World's Largest Open Board</strong>
+                  Over 3.5 crore students enrolled across India
+                </div>
+              </div>
+              <div class="nios-fact">
+                <span class="fact-icon">📜</span>
+                <div class="fact-text">
+                  <strong>Equivalent to CBSE</strong>
+                  Accepted for all colleges, government jobs &amp; exams
+                </div>
+              </div>
+              <div class="nios-fact">
+                <span class="fact-icon">📅</span>
+                <div class="fact-text">
+                  <strong>On-Demand Exams</strong>
+                  Appear anytime — no fixed yearly schedule
+                </div>
+              </div>
+              <div class="nios-fact">
+                <span class="fact-icon">📚</span>
+                <div class="fact-text">
+                  <strong>Subject Flexibility</strong>
+                  Choose your own combination of subjects
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 3. TWO PATHWAY CARDS ===== -->
+      <section class="pathway-section">
+        <div class="section-header fade-in">
+          <div class="section-label">Your Path Forward</div>
+          <h2 class="section-title">Which <span>Pathway</span> is Yours?</h2>
+          <p class="section-sub">Whether you're targeting 10th or 12th — NIOS has a solution for you.</p>
+        </div>
+
+        <div class="pathway-wrapper">
+          <div class="pathway-cards">
+            <!-- Card 1: 10th -->
+            <div class="pathway-card red fade-in fade-in-delay-1">
+              <span class="pathway-emoji">📖</span>
+              <p class="pathway-question">Failed <strong>8th / 9th / 10th</strong>?</p>
+              <div class="pathway-arrow">→ Clear 10th directly!</div>
+              <p class="pathway-outcome">NIOS 10th Certification</p>
+              <p class="pathway-detail">
+                Even if you failed your 10th board exam — you can enroll in NIOS and get your 10th certificate. No need to repeat the year. Choose your subjects, study at your own pace, and appear for the exam when you're ready.
+              </p>
+              <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 6px;">
+                <div style="font-size: .8rem; color: #ff8888; display: flex; gap: 6px; align-items: center;"><span>✓</span> No age restriction</div>
+                <div style="font-size: .8rem; color: #ff8888; display: flex; gap: 6px; align-items: center;"><span>✓</span> Flexible subject selection</div>
+                <div style="font-size: .8rem; color: #ff8888; display: flex; gap: 6px; align-items: center;"><span>✓</span> On-demand exams available</div>
+              </div>
+              <div style="margin-top: 20px;">
+                <button class="btn-nios-primary" onclick="openApplyModal('NIOS 10th')" style="width: 100%; justify-content: center;">
+                  Apply for NIOS 10th
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 2: 12th -->
+            <div class="pathway-card green fade-in fade-in-delay-2">
+              <span class="pathway-emoji">🎓</span>
+              <p class="pathway-question">Failed <strong>11th / 12th</strong>?</p>
+              <div class="pathway-arrow">→ Complete 12th directly!</div>
+              <p class="pathway-outcome">NIOS 12th Certification</p>
+              <p class="pathway-detail">
+                Already have your 10th? Whether you failed 12th or dropped out — NIOS lets you complete 12th at your own pace. Your certificate is recognized for all university admissions and government jobs across India.
+              </p>
+              <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 6px;">
+                <div style="font-size: .8rem; color: #86efac; display: flex; gap: 6px; align-items: center;"><span>✓</span> Accepted for all colleges</div>
+                <div style="font-size: .8rem; color: #86efac; display: flex; gap: 6px; align-items: center;"><span>✓</span> Competitive exam eligible</div>
+                <div style="font-size: .8rem; color: #86efac; display: flex; gap: 6px; align-items: center;"><span>✓</span> Science, Commerce &amp; Arts streams</div>
+              </div>
+              <div style="margin-top: 20px;">
+                <button class="btn-nios-primary" onclick="openApplyModal('NIOS 12th')" style="width: 100%; justify-content: center;">
+                  Apply for NIOS 12th
+                </button>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+      </section>
+
+      <!-- ===== 4. HOW WE HELP ===== -->
+      <section class="help-section">
+        <div class="section-header fade-in">
+          <div class="section-label">Our Support</div>
+          <h2 class="section-title">How We <span>Help You</span></h2>
+          <p class="section-sub">Course Campus provides end-to-end support — from enrollment to your final result.</p>
+        </div>
+
+        <div class="help-grid">
+          <div class="help-box fade-in">
+            <div class="help-icon">🏅</div>
+            <h4>Former NIOS Coordinator</h4>
+            <p>Ashu Sir's 7+ years as a NIOS coordinator means you get insider knowledge on forms, subjects, and exams.</p>
+          </div>
+          <div class="help-box fade-in fade-in-delay-1">
+            <div class="help-icon">🕐</div>
+            <h4>Regular Classes</h4>
+            <p>Morning, evening and weekend batches with structured study plans, notes, and mock tests included.</p>
+          </div>
+          <div class="help-box fade-in fade-in-delay-2">
+            <div class="help-icon">✅</div>
+            <h4>100% Assistance</h4>
+            <p>We handle your enrollment form, subject selection, admit card, and result process — completely.</p>
+          </div>
+          <div class="help-box fade-in fade-in-delay-3">
+            <div class="help-icon">🚀</div>
+            <h4>Job + College Guidance</h4>
+            <p>After your certificate, we guide you towards the right college admissions or career opportunities.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 5. IGNOU SECTION ===== -->
+      <section class="ignou-section">
+        <div class="section-header fade-in">
+          <div class="section-label">Also Available</div>
+          <h2 class="section-title"><span>IGNOU</span> Support</h2>
+          <p class="section-sub">Indira Gandhi National Open University — get degree-level education from home.</p>
+        </div>
+
+        <div class="ignou-inner fade-in fade-in-delay-1">
+          <div class="ignou-header">
+            <div class="ignou-logo-text">🎓 IGNOU — The People's University</div>
+            <p>India's largest central university with 48 lakh+ students. UG and PG degrees from the comfort of your home.</p>
+          </div>
+          <div class="ignou-cards">
+            <div class="ignou-card">
+              <div class="ignou-card-icon">📋</div>
+              <h4>IGNOU Admission Help</h4>
+              <p>Complete guidance for IGNOU enrollment — from program selection to registration and fee payment.</p>
+              <ul class="ignou-list">
+                <li>Program &amp; subject selection advice</li>
+                <li>Online &amp; offline enrollment support</li>
+                <li>Study centre allocation guidance</li>
+                <li>BA, BCA, BBA, MBA, MCA, M.Com &amp; more</li>
+              </ul>
+            </div>
+            <div class="ignou-card">
+              <div class="ignou-card-icon">📝</div>
+              <h4>Assignment Assistance</h4>
+              <p>IGNOU assignments count towards your final grade. We help you understand, write, and submit them correctly.</p>
+              <ul class="ignou-list">
+                <li>Assignment writing guidance</li>
+                <li>Submission deadline tracking</li>
+                <li>Term-end exam preparation</li>
+                <li>Grade card &amp; certificate follow-up</li>
+              </ul>
+            </div>
+          </div>
+          <div style="text-align:center; margin-top: 28px;">
+            <button class="btn-nios-primary" onclick="openApplyModal('IGNOU')">
+              Enroll for IGNOU Guidance
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 6. WHY NIOS ===== -->
+      <section class="why-nios-section">
+        <div class="section-header fade-in">
+          <div class="section-label">Benefits</div>
+          <h2 class="section-title">Why Choose <span>NIOS?</span></h2>
+          <p class="section-sub">A government-recognized qualification that opens every door — at your pace, on your terms.</p>
+        </div>
+
+        <div class="why-nios-grid">
+          <div class="why-nios-item fade-in">
+            <div class="check-circle">✓</div>
+            <div class="why-nios-text">
+              <h4>Valid for Govt. Jobs</h4>
+              <p>Accepted by SSC, Railway, Police, Bank, and all central government recruitment boards.</p>
+            </div>
+          </div>
+          <div class="why-nios-item fade-in fade-in-delay-1">
+            <div class="check-circle">✓</div>
+            <div class="why-nios-text">
+              <h4>College Admissions</h4>
+              <p>Recognized by DU, JNU, Jamia, IGNOU and all universities for undergraduate admissions.</p>
+            </div>
+          </div>
+          <div class="why-nios-item fade-in fade-in-delay-2">
+            <div class="check-circle">✓</div>
+            <div class="why-nios-text">
+              <h4>Flexible Schedule</h4>
+              <p>Study mornings, evenings or weekends — no rigid daily school timings to follow.</p>
+            </div>
+          </div>
+          <div class="why-nios-item fade-in fade-in-delay-1">
+            <div class="check-circle">✓</div>
+            <div class="why-nios-text">
+              <h4>Learn at Own Pace</h4>
+              <p>No pressure of annual exams. Appear for each subject when you are ready and confident.</p>
+            </div>
+          </div>
+          <div class="why-nios-item fade-in fade-in-delay-2">
+            <div class="check-circle">✓</div>
+            <div class="why-nios-text">
+              <h4>All India Validity</h4>
+              <p>Recognized across all 28 states and union territories — not restricted to any single state.</p>
+            </div>
+          </div>
+          <div class="why-nios-item fade-in fade-in-delay-3">
+            <div class="check-circle">✓</div>
+            <div class="why-nios-text">
+              <h4>No Age Limit</h4>
+              <p>Students of any age can enroll. Whether 14 or 45 — education has no expiry date.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 7. BOTTOM CTA ===== -->
+      <section class="nios-cta">
+        <h2 class="fade-in">Stop Wasting Years.<br><span>Restart Today.</span></h2>
+        <p class="sub fade-in fade-in-delay-1">
+          Your NIOS certificate can open doors to government jobs, college admissions, and a better future.<br>
+          Talk to our counselor — it's completely free.
+        </p>
+
+        <div class="nios-cta-btns fade-in fade-in-delay-2">
+          <button class="btn-nios-primary" onclick="openApplyModal('NIOS 10th')" style="font-size: 1rem; padding: 14px 32px;">
+            🎓 Apply Now — Free Counseling
+          </button>
+          <a href="https://wa.me/918285919263?text=Hi%2C%20I%20want%20to%20know%20more%20about%20NIOS%20admission%20at%20Course%20Campus"
+             target="_blank" rel="noopener noreferrer" class="btn-cta-wa">
+            💬 WhatsApp Us
+          </a>
+        </div>
+
+        <div class="cta-phone-row fade-in fade-in-delay-3">
+          <a href="tel:+918285919263" class="cta-phone-link">
+            <span class="ph-icon">📞</span>+91 82859 19263
+          </a>
+          <a href="tel:+919310227258" class="cta-phone-link">
+            <span class="ph-icon">📞</span>+91 93102 27258
+          </a>
+          <a href="tel:+917292007680" class="cta-phone-link">
+            <span class="ph-icon">📞</span>+91 72920 07680
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="assets/logo.png" alt="Course Campus" height="40">
+          </div>
+          <div class="footer-tagline">Learn. Grow. Succeed</div>
+          <div class="footer-contact">
+            <p>📍 316/11 Shani Bazar, Bandh Road,<br>Sangam Vihar, New Delhi 110080</p>
+          </div>
+          <div class="footer-phones" style="margin-top:14px;">
+            <a href="tel:+918285919263">+91 82859 19263</a>
+            <a href="tel:+919310227258">+91 93102 27258</a>
+            <a href="tel:+917292007680">+91 72920 07680</a>
+          </div>
+          <div class="footer-social">
+            <a href="https://www.youtube.com/@coursecampusedu" target="_blank" rel="noopener noreferrer" class="social-link social-yt"><i class="fab fa-youtube"></i><span>YouTube</span></a>
+            <a href="https://www.instagram.com/coursecampusedu" target="_blank" rel="noopener noreferrer" class="social-link social-ig"><i class="fab fa-instagram"></i><span>Instagram</span></a>
+            <a href="https://wa.me/918285919263" target="_blank" rel="noopener noreferrer" class="social-link social-wa"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="nios.html">NIOS Support</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">More</div>
+          <ul class="footer-links">
+            <li><a href="career.html">Career Guidance</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Course Campus. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- BOTTOM NAVIGATION (Mobile) -->
+  <nav class="bottom-nav">
+    <a href="index.html" class="bottom-nav-item">
+      <span class="nav-icon">🏠</span><span>Home</span>
+    </a>
+    <a href="nios.html" class="bottom-nav-item">
+      <span class="nav-icon">📚</span><span>NIOS</span>
+    </a>
+    <a href="courses.html" class="bottom-nav-item">
+      <span class="nav-icon">📊</span><span>Courses</span>
+    </a>
+    <a href="faq.html" class="bottom-nav-item">
+      <span class="nav-icon">❓</span><span>FAQ</span>
+    </a>
+    <a href="contact.html" class="bottom-nav-item">
+      <span class="nav-icon">☎️</span><span>Contact</span>
+    </a>
+  </nav>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/918285919263?text=Hi%2C%20I%20want%20to%20know%20more%20about%20NIOS%20admission%20at%20Course%20Campus"
+     class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Back to top">↑</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

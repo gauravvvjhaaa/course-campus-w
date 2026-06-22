@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Campus - Learn. Grow. Succeed</title>
+  <meta name="description" content="Explore courses at Course Campus — NIOS, IGNOU, D.El.Ed, Distance Degrees, Regular College Admissions. Find the right program for you in New Delhi.">
+  <meta name="keywords" content="NIOS courses, IGNOU distance degree, D.El.Ed admission, regular college, distance education New Delhi, Course Campus">
+  <link rel="icon" href="assets/logo.png" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <a href="index.html"><img src="assets/logo.png" alt="Course Campus" height="60"></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="nios.html">NIOS Support</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="career.html">Career Guidance</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="navbar-right">
+      <a href="https://www.youtube.com/@coursecampusedu" target="_blank" rel="noopener noreferrer" class="nav-social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/coursecampusedu" target="_blank" rel="noopener noreferrer" class="nav-social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <button class="btn-apply" onclick="openApplyModal()">Apply Now</button>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()">&#9776;</button>
+  </nav>
+
+  <div class="nav-mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="nios.html">NIOS Support</a>
+    <a href="courses.html">Courses</a>
+    <a href="faq.html">FAQ</a>
+    <a href="career.html">Career Guidance</a>
+    <a href="contact.html">Contact</a>
+    <a href="#" class="btn-apply-mobile" onclick="openApplyModal(); return false;">Apply Now</a>
+  </div>
+
+  <div class="page-wrapper" style="padding-top:0;">
+    <main class="main-content">
+
+      <!-- HERO -->
+      <section class="courses-hero">
+        <div class="section-label fade-in">All Programs</div>
+        <h1 class="fade-in fade-in-delay-1">Our <span>Courses</span></h1>
+        <p class="fade-in fade-in-delay-2">Choose your path — we guide the rest</p>
+      </section>
+
+      <!-- STICKY TABS -->
+      <!-- Consultation note -->
+      <div class="consultation-note" style="margin: 0 5% 20px;">
+        <span class="note-icon">💡</span>
+        <p>Not sure which course is right for you? <strong>Don't worry</strong> — our counselors provide <strong>free, personalized guidance</strong>.
+          <a href="contact.html" class="note-link">Book a free session →</a>
+        </p>
+      </div>
+
+      <!-- Scholarship banner -->
+      <div class="scholarship-note" style="margin: 0 5% 20px;">
+        <span>🎓</span>
+        <p>
+          <strong>Fee Discounts &amp; Scholarships Available</strong> —
+          We provide special fee concessions to students based on their academic merit and achievements.
+        </p>
+      </div>
+
+      <div class="courses-tabs-wrap">
+        <div class="courses-tabs">
+          <button class="tab-btn active" data-tab="teaching" onclick="switchTab('teaching')">👨‍🏫 Teaching</button>
+          <button class="tab-btn" data-tab="it" onclick="switchTab('it')">💻 IT &amp; Tech</button>
+          <button class="tab-btn" data-tab="management" onclick="switchTab('management')">💼 Management</button>
+          <button class="tab-btn" data-tab="medical" onclick="switchTab('medical')">🏥 Medical</button>
+        </div>
+      </div>
+
+      <!-- TAB PANELS -->
+      <div id="panel-teaching" class="courses-panel active"></div>
+      <div id="panel-it" class="courses-panel"></div>
+      <div id="panel-management" class="courses-panel"></div>
+      <div id="panel-medical" class="courses-panel"></div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="assets/logo.png" alt="Course Campus" height="40"></div>
+          <div class="footer-tagline">Learn. Grow. Succeed</div>
+          <div class="footer-contact">
+            <p>📍 316/11 Shani Bazar, Bandh Road,<br>Sangam Vihar, New Delhi 110080</p>
+          </div>
+          <div class="footer-phones" style="margin-top:14px;">
+            <a href="tel:+918285919263">+91 82859 19263</a>
+            <a href="tel:+919310227258">+91 93102 27258</a>
+            <a href="tel:+917292007680">+91 72920 07680</a>
+          </div>
+          <div class="footer-social">
+            <a href="https://www.youtube.com/@coursecampusedu" target="_blank" rel="noopener noreferrer" class="social-link social-yt"><i class="fab fa-youtube"></i><span>YouTube</span></a>
+            <a href="https://www.instagram.com/coursecampusedu" target="_blank" rel="noopener noreferrer" class="social-link social-ig"><i class="fab fa-instagram"></i><span>Instagram</span></a>
+            <a href="https://wa.me/918285919263" target="_blank" rel="noopener noreferrer" class="social-link social-wa"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="nios.html">NIOS Support</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">More</div>
+          <ul class="footer-links">
+            <li><a href="career.html">Career Guidance</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Course Campus. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- BOTTOM NAV -->
+  <nav class="bottom-nav">
+    <a href="index.html"   class="bottom-nav-item"><span class="nav-icon">🏠</span><span>Home</span></a>
+    <a href="nios.html"    class="bottom-nav-item"><span class="nav-icon">📚</span><span>NIOS</span></a>
+    <a href="courses.html" class="bottom-nav-item"><span class="nav-icon">📊</span><span>Courses</span></a>
+    <a href="faq.html"     class="bottom-nav-item"><span class="nav-icon">❓</span><span>FAQ</span></a>
+    <a href="contact.html" class="bottom-nav-item"><span class="nav-icon">☎️</span><span>Contact</span></a>
+  </nav>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/918285919263?text=Hi%2C%20I%20want%20to%20know%20more%20about%20courses%20at%20Course%20Campus"
+     class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+  <button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Back to top">↑</button>
+
+  <!-- COURSE DETAIL POPUP -->
+  <div class="course-popup-overlay" id="coursePopup">
+    <div class="course-popup">
+      <div class="course-popup-hdr" id="popupHdr"></div>
+      <div class="course-popup-body" id="popupBody"></div>
+      <div class="course-popup-footer">
+        <div class="popup-btns">
+          <button class="popup-apply" id="popupApplyBtn">🎓 Apply Now</button>
+          <a href="#" class="popup-wa" id="popupWaBtn" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i> WhatsApp Us
+          </a>
+        </div>
+        <p class="popup-note">
+          Can't find your desired course? <a href="contact.html">Contact us</a> — we have many more options available!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+  /* ===== COURSE DATA ===== */
+  const COURSES = {
+    teaching: [
+      {
+        id:'bed', icon:'🎓', short:'B.Ed', full:'Bachelor of Education', duration:'2 Years', mode:'Regular & Distance Mode',
+        overview:'2-year professional degree that trains graduates to become certified school teachers for Classes 6–12. Recognized by NCTE (National Council for Teacher Education) and required for most secondary school teaching positions.',
+        eligibility:['Graduation in any stream from a recognized university','Minimum 50% aggregate marks (45% for reserved categories)','Valid for government and private school teacher recruitment'],
+        skills:['Lesson planning and curriculum design','Classroom management and pedagogy','Child psychology and learning theories','Assessment and evaluation techniques','Communication and soft skills'],
+        roles:['Secondary School Teacher (Class 6–12)','High School Teacher','Private Tutor / Coaching Instructor','Education Coordinator','School Administrator / Vice Principal'],
+        howWeHelp:'Course Campus guides you through B.Ed admission from NCTE-recognized universities, assists with eligibility verification, document preparation, online application, and post-admission academic support throughout the program.'
+      },
+      {
+        id:'deled', icon:'📜', short:'D.El.Ed', full:'Diploma in Elementary Education', duration:'2 Years', mode:'Full-Time Professional Course',
+        overview:'D.El.Ed is a 2-year SCERT approved professional teacher training diploma that qualifies candidates to teach at primary level (Classes 1–8) in government and private schools across India. It is government recognized and valid all over India for teaching jobs.',
+        eligibility:['10+2 (Senior Secondary) pass from recognized board','English as a compulsory subject','Minimum 50% marks (relaxation as per govt norms)','No upper age restriction'],
+        skills:['Primary level teaching methods and techniques','Child psychology and development','Activity-based and play-way learning methods','Classroom management and lesson planning','Evaluation and assessment techniques'],
+        roles:['Primary Teacher in Govt &amp; Private Schools','Assistant Teacher','Education Counselor','NGO Education Sector Worker','Further studies like B.Ed'],
+        howWeHelp:'We guide you through complete D.El.Ed admission process including eligibility check, documentation, application submission and enrollment. SCERT approved, government recognized, all-India valid.'
+      },
+      {
+        id:'jbt', icon:'🏫', short:'JBT', full:'Junior Basic Training', duration:'2 Years', mode:'Regular Mode',
+        overview:'Junior Basic Training prepares candidates for primary level teaching positions in government and private schools. A state-recognized teaching qualification for Classes 1–5 instruction.',
+        eligibility:['10+2 pass from a recognized board','Minimum 45–50% aggregate marks','Age and reservation criteria as per state government norms'],
+        skills:['Basic teaching skills and instructional design','Child behavior management','Hindi and English language instruction','Activity and play-based learning','Lesson planning for primary classes'],
+        roles:['Primary School Teacher','Government School Teacher','Private School Instructor','Anganwadi Supervisor (with additional training)'],
+        howWeHelp:'We guide you through JBT admission including institution selection, document preparation, form submission and fee payment. Our counselors ensure you choose the right recognized institution for your state.'
+      },
+      {
+        id:'ntt', icon:'🌸', short:'NTT', full:'Nursery Teacher Training', duration:'1 Year', mode:'Regular Mode',
+        overview:'Nursery Teacher Training prepares candidates for teaching children aged 2.5–6 years in nursery, KG, and pre-primary schools. Focused on early childhood development and play-based learning approaches.',
+        eligibility:['10+2 pass in any stream from a recognized board','No specific percentage requirement for most institutions','Passion for working with young children recommended'],
+        skills:['Early childhood development principles','Play-based and activity-based learning','Creative arts, music and storytelling','Classroom setup and sensory play environments','Parent communication and child progress reporting'],
+        roles:['Nursery Teacher','KG / Pre-Primary Teacher','Playschool Teacher','Creche / Daycare Supervisor','Montessori Teacher (with additional certification)'],
+        howWeHelp:'Course Campus assists with NTT college selection, application, and enrollment. We help you choose a recognized institution accepted for nursery school appointments in Delhi and surrounding states.'
+      },
+      {
+        id:'ecc', icon:'👶', short:'ECC', full:'Early Childhood Care', duration:'1 Year', mode:'Regular Mode',
+        overview:'Early Childhood Care course focuses on holistic development of children from birth to age 8. Covers health, nutrition, cognitive, emotional, and social development in the early years.',
+        eligibility:['10+2 pass from any recognized board','Open to all streams — no specific subject requirement','Age: 18+ years'],
+        skills:['Child psychology and cognitive development','Nutrition awareness and health monitoring','Emotional support and attachment theory','Activity and curriculum design for early childhood','Record keeping and developmental assessment'],
+        roles:['Early Childhood Educator','Daycare / Creche Supervisor','Child Development Worker','Anganwadi Worker (government sector)','Parent Educator and Community Health Worker'],
+        howWeHelp:'We handle ECC enrollment from recognized institutions, advise on recognition status for Anganwadi and government sector posts, and provide post-admission academic guidance.'
+      },
+    ],
+    it: [
+      {
+        id:'bca', icon:'💻', short:'BCA', full:'Bachelor of Computer Applications', duration:'3 Years', mode:'Regular & Distance Mode',
+        overview:'3-year undergraduate degree in computer applications covering programming, database management, networking, and software development. One of the most in-demand IT degrees for entry-level tech careers.',
+        eligibility:['10+2 with Mathematics or Computer Science','Minimum 45% aggregate marks','Graduates from recognized boards eligible for lateral entry in some universities'],
+        skills:['Programming: C, C++, Java, Python','Database management with SQL','Web development (HTML, CSS, JavaScript)','Networking and system administration','Software engineering and project management'],
+        roles:['Software Developer / Programmer','Web Developer','Database Administrator','IT Support Engineer','System Analyst'],
+        howWeHelp:'Course Campus assists with BCA enrollment from UGC-recognized distance universities including admission, document preparation, and academic guidance for assignments and semester exams.'
+      },
+      {
+        id:'mca', icon:'🖥️', short:'MCA', full:'Master of Computer Applications', duration:'2 Years', mode:'Regular & Distance Mode',
+        overview:'2-year postgraduate program in advanced computer applications and software development. Ideal for BCA graduates and science graduates seeking senior IT roles and software engineering positions.',
+        eligibility:['BCA or any graduation with Mathematics at 10+2 or graduation level','Minimum 50% aggregate marks in qualifying degree','Some universities accept graduates from any stream with basic computer knowledge'],
+        skills:['Advanced programming and software architecture','Artificial intelligence and machine learning basics','Cloud computing and DevOps','Database design and administration','Project management and agile methodologies'],
+        roles:['Software Engineer / Senior Developer','Full Stack Developer','IT Project Manager','System Designer and Architect','Technology Lead'],
+        howWeHelp:'We guide you through MCA admission from UGC-approved universities, help with eligibility verification, and provide academic support for assignments, projects, and semester examination preparation.'
+      },
+      {
+        id:'ds', icon:'📊', short:'Data Science', full:'Data Science & Analytics', duration:'1–2 Years', mode:'Online & Distance Mode',
+        overview:'Program teaching data analysis, machine learning, and statistical tools for data-driven decision making. One of the fastest-growing fields globally with strong salary and demand growth.',
+        eligibility:['Graduation in any stream from a recognized university','Basic mathematics knowledge (10+2 level sufficient)','No prior coding experience required for beginner programs'],
+        skills:['Python and R programming for data analysis','SQL and database querying','Machine learning algorithms and model building','Data visualization with Tableau, Power BI','Statistics, probability, and Excel for business analytics'],
+        roles:['Data Analyst','Data Scientist','Business Intelligence (BI) Analyst','Machine Learning Engineer','Research and Reporting Analyst'],
+        howWeHelp:'Course Campus connects you with recognized online data science programs, helps with enrollment and course selection, and provides guidance on industry certifications (Google, IBM, Coursera) that enhance employability.'
+      },
+      {
+        id:'cloud', icon:'☁️', short:'Cloud Computing', full:'Cloud Computing & DevOps', duration:'6 Months – 1 Year', mode:'Online Mode',
+        overview:'Course covering cloud platforms, infrastructure management, and DevOps practices. Cloud skills are among the highest-paid in the IT industry globally.',
+        eligibility:['10+2 pass or graduation from any stream','Basic computer and internet knowledge','Prior IT experience helpful but not mandatory for beginner programs'],
+        skills:['AWS, Microsoft Azure, and Google Cloud Platform','Linux operating system and command line','DevOps tools: Docker, Kubernetes, Jenkins','Networking and virtualization fundamentals','Cloud security and access management'],
+        roles:['Cloud Engineer','DevOps Engineer','Solutions Architect','Cloud Consultant / Administrator','Site Reliability Engineer (SRE)'],
+        howWeHelp:'We help you select the right cloud certification path (AWS Certified, Azure Fundamentals, Google Cloud Associate), assist with enrollment, and guide study planning for these globally recognized credentials.'
+      },
+      {
+        id:'cyber', icon:'🔐', short:'Cyber Security', full:'Cyber Security & Ethical Hacking', duration:'6 Months – 1 Year', mode:'Online Mode',
+        overview:'Program covering network security, ethical hacking, and digital forensics. Cybersecurity professionals are among the most sought-after globally with extremely low unemployment rates.',
+        eligibility:['10+2 or graduation with basic IT knowledge','Understanding of computer networks helpful','No advanced programming required for beginner track'],
+        skills:['Ethical hacking and penetration testing','Network security and firewall configuration','Cryptography and data protection','Digital forensics and incident response','Security tools: Kali Linux, Metasploit, Wireshark'],
+        roles:['Cybersecurity Analyst','Ethical Hacker / Penetration Tester','Network Security Engineer','Information Security Auditor','SOC (Security Operations Center) Analyst'],
+        howWeHelp:'Course Campus guides you toward recognized cybersecurity certifications (CEH, CompTIA Security+, OSCP) and assists with enrollment in programs that provide hands-on lab environments and industry-recognized credentials.'
+      },
+      {
+        id:'web', icon:'🌐', short:'Web Development', full:'Full Stack Web Development', duration:'6 Months', mode:'Online Mode',
+        overview:'Practical course on building modern websites and web applications from scratch. Covers both frontend and backend development — one of the most employable skills in the job market today.',
+        eligibility:['10+2 pass from any stream','Basic computer knowledge','Interest in building websites and applications'],
+        skills:['HTML, CSS, and responsive design','JavaScript, React.js for frontend','Node.js and Express for backend','Database: MongoDB and MySQL','Git, GitHub, and deployment (Vercel, Netlify)'],
+        roles:['Frontend Developer','Backend Developer','Full Stack Developer','UI/UX Designer (with design training)','Freelance Web Developer'],
+        howWeHelp:'We connect you with job-focused web development bootcamps and programs with placement support. We help with enrollment, guide project portfolio building, and assist with job application strategies post-completion.'
+      },
+    ],
+    management: [
+      {
+        id:'bba', icon:'📈', short:'BBA', full:'Bachelor of Business Administration', duration:'3 Years', mode:'Regular & Distance Mode',
+        overview:'3-year undergraduate management degree covering business administration, marketing, finance, and operations. Foundation degree for a career in management, entrepreneurship, or MBA preparation.',
+        eligibility:['10+2 in any stream from a recognized board','Minimum 45% aggregate marks','Available with specializations: Marketing, Finance, HR, Retail Management'],
+        skills:['Business management and organizational behavior','Marketing strategy and consumer behavior','Financial accounting and planning','Leadership and team management','Business communication and presentation'],
+        roles:['Business Analyst','Marketing Executive','Sales Manager','Human Resources (HR) Executive','Operations Coordinator / Entrepreneur'],
+        howWeHelp:'Course Campus enrolls you in BBA programs from our partner universities (Amity, Manipal, Shobhit, KSOU). We handle the entire admission process and help you choose the right specialization for your career goals.'
+      },
+      {
+        id:'mba', icon:'🏆', short:'MBA', full:'Master of Business Administration', duration:'2 Years', mode:'Regular & Distance Mode',
+        overview:'2-year postgraduate management degree for leadership and advanced business strategy. Recognized globally for senior management, corporate, and entrepreneurship roles across all industries.',
+        eligibility:['Any graduation from a recognized university','Minimum 50% aggregate marks in graduation','Available with specializations: Marketing, Finance, HR, Operations, International Business'],
+        skills:['Strategic management and business planning','Corporate finance and investment analysis','Operations management and supply chain','Leadership, negotiation, and decision-making','Business analytics and data-driven management'],
+        roles:['Manager / Senior Manager','Business Consultant','Marketing Head / Brand Manager','Operations and Supply Chain Manager','Entrepreneur / Business Owner'],
+        howWeHelp:'We offer MBA enrollment from UGC-recognized distance universities including Amity University Online, Manipal University Jaipur, and others. We assist with program selection by specialization, admission, and exam guidance.'
+      },
+    ],
+    medical: [
+      {
+        id:'bums', icon:'🌿', short:'BUMS', full:'Bachelor of Unani Medicine & Surgery', duration:'5.5 Years', mode:'Regular Mode',
+        overview:"Bachelor of Unani Medicine & Surgery — 5.5-year degree in the traditional Unani medical system. Graduates are licensed to practice as Unani doctors in India's AYUSH medical system.",
+        eligibility:['10+2 with Biology, Physics, and Chemistry','Minimum 50% aggregate marks in PCB','Valid NEET score may be required by some institutions'],
+        skills:['Unani diagnosis and treatment methodologies','Herbal medicine and pharmacology (Ilmul Advia)','Patient care and clinical examination','Anatomy, physiology, and pathology','Medical ethics and healthcare management'],
+        roles:['Registered Unani Doctor','Medical Officer (AYUSH Government Posts)','Researcher in Traditional Medicine','Clinic Owner and Private Practitioner','Health Consultant and Wellness Coach'],
+        howWeHelp:'Course Campus provides complete guidance for BUMS admission — from college selection and NEET advisory to application, documentation, and enrollment support at recognized CCIM-affiliated medical colleges.'
+      },
+      {
+        id:'mbbs', icon:'🩺', short:'MBBS', full:'Bachelor of Medicine & Surgery', duration:'5.5 Years', mode:'Regular Mode',
+        overview:'Guidance for MBBS admissions through proper channels and recognized medical colleges. MBBS is the primary medical degree in India, required to practice allopathic medicine.',
+        eligibility:['10+2 with Physics, Chemistry, Biology (PCB)','NEET-UG qualified (mandatory for all MBBS admissions in India)','Minimum 50% in PCB (45% for reserved categories)'],
+        skills:['Medical diagnosis and clinical examination','Anatomy, physiology, biochemistry, and pharmacology','Surgical techniques and patient management','Radiology and diagnostic procedures','Medical ethics, research, and evidence-based practice'],
+        roles:['Medical Doctor (MBBS)','Medical Officer in Government/Private Hospitals','Specialist (after PG/MD/MS)','Medical Researcher','Healthcare Administrator'],
+        howWeHelp:'We provide comprehensive NEET preparation guidance, college selection advisory, application support for government and private medical colleges, and counseling for NEET-UG seat allotment rounds.'
+      },
+      {
+        id:'bpharma', icon:'💊', short:'B.Pharma', full:'Bachelor of Pharmacy', duration:'4 Years', mode:'Regular Mode',
+        overview:'4-year undergraduate degree in pharmaceutical sciences covering drug development, quality control, pharmacology, and clinical pharmacy. Required to become a licensed pharmacist in India.',
+        eligibility:['10+2 with Physics, Chemistry, and Biology or Mathematics','Minimum 50% aggregate marks in PCB/PCM','GPAT or state pharmacy entrance exam for some institutions'],
+        skills:['Pharmacology and drug interaction analysis','Pharmaceutical chemistry and drug formulation','Quality control and regulatory affairs','Clinical pharmacy and patient counseling','Laboratory techniques and research methodology'],
+        roles:['Registered Pharmacist','Drug Inspector (Government Role)','Research Associate in Pharma Companies','Medical Representative','Quality Control / Assurance Analyst'],
+        howWeHelp:'Course Campus guides you through B.Pharma college selection, PCI-approved institution identification, application filing, and enrollment support at recognized pharmacy colleges in Delhi-NCR and across India.'
+      },
+      {
+        id:'dpharma', icon:'🧪', short:'D.Pharma', full:'Diploma in Pharmacy', duration:'2 Years', mode:'Regular Mode',
+        overview:'2-year diploma providing foundation in pharmacy and pharmaceutical sciences. Faster pathway to a pharmacy career than B.Pharma, directly enabling medical store ownership and hospital pharmacy roles.',
+        eligibility:['10+2 with Physics, Chemistry, and Biology or Mathematics','Minimum 45% aggregate marks in science subjects','Age: 17+ years at the time of admission'],
+        skills:['Dispensing and compounding of medicines','Drug storage, handling, and inventory management','Patient counseling on medicine usage','Pharmacy management and store operations','Basic pharmacology and drug classification'],
+        roles:['Registered Pharmacist','Medical Store / Pharmacy Owner','Hospital Pharmacist','Drug Store Assistant Manager','Pharmaceutical Sales Representative'],
+        howWeHelp:'We assist with D.Pharma admission at PCI-recognized institutions, eligibility verification, document preparation, and enrollment. Post-completion, we guide you toward pharmacy registration with the State Pharmacy Council.'
+      },
+    ],
+  };
+
+  let currentCourseId = null;
+
+  /* ===== RENDER CARDS ===== */
+  function renderCards(tab) {
+    const panel = document.getElementById('panel-' + tab);
+    const grid = document.createElement('div');
+    grid.className = 'courses-grid';
+    COURSES[tab].forEach(course => {
+      const card = document.createElement('div');
+      card.className = 'course-card fade-in';
+      card.innerHTML =
+        '<span class="cc-icon">' + course.icon + '</span>' +
+        '<div class="cc-short">' + course.short + '</div>' +
+        '<div class="cc-full">' + course.full + '</div>' +
+        '<span class="cc-duration">&#9201; ' + course.duration + '</span>' +
+        '<div class="cc-hint">View Details &rarr;</div>';
+      card.addEventListener('click', () => openPopup(course.id));
+      grid.appendChild(card);
+    });
+    panel.appendChild(grid);
+    // Trigger fade-in observer on new cards
+    grid.querySelectorAll('.fade-in').forEach(el => {
+      if (typeof fadeObserver !== 'undefined') fadeObserver.observe(el);
+      else el.classList.add('visible');
+    });
+  }
+
+  /* ===== TAB SWITCHING ===== */
+  function switchTab(tab) {
+    const savedPos = window.scrollY;
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+    document.querySelectorAll('.courses-panel').forEach(p => p.classList.toggle('active', p.id === 'panel-' + tab));
+    requestAnimationFrame(() => window.scrollTo(0, savedPos));
+  }
+
+  /* ===== COURSE POPUP ===== */
+  function openPopup(id) {
+    const course = Object.values(COURSES).flat().find(c => c.id === id);
+    if (!course) return;
+    currentCourseId = id;
+
+    // Header
+    document.getElementById('popupHdr').innerHTML =
+      '<div class="popup-title-block">' +
+        '<span class="popup-emoji">' + course.icon + '</span>' +
+        '<div class="popup-name">' + course.short + '</div>' +
+        '<div class="popup-fullname">' + course.full + '</div>' +
+        '<span class="popup-dur">&#9201; ' + course.duration + '</span>' +
+      '</div>' +
+      '<button class="popup-x" onclick="closePopup()" aria-label="Close">&#x2715;</button>';
+
+    // Body
+    document.getElementById('popupBody').innerHTML =
+      '<div class="popup-sec"><h4>&#128203; Course Overview</h4><p>' + course.overview + '</p></div>' +
+      '<div class="popup-divider"></div>' +
+      '<div class="popup-sec"><h4>&#9989; Eligibility</h4><ul>' +
+        course.eligibility.map(e => '<li>' + e + '</li>').join('') +
+      '</ul></div>' +
+      '<div class="popup-divider"></div>' +
+      '<div class="popup-sec"><h4>&#127919; Skills You Will Learn</h4><ul>' +
+        course.skills.map(s => '<li>' + s + '</li>').join('') +
+      '</ul></div>' +
+      '<div class="popup-divider"></div>' +
+      '<div class="popup-sec"><h4>&#128188; Career Roles</h4><ul>' +
+        course.roles.map(r => '<li>' + r + '</li>').join('') +
+      '</ul></div>' +
+      '<div class="popup-divider"></div>' +
+      '<div class="popup-sec"><h4>&#127963; How Course Campus Helps</h4><p>' + course.howWeHelp + '</p></div>';
+
+    // Footer buttons
+    document.getElementById('popupApplyBtn').onclick = function() {
+      closePopup();
+      setTimeout(() => openApplyModal(course.short), 120);
+    };
+    document.getElementById('popupWaBtn').href =
+      'https://wa.me/918285919263?text=Hi%2C+I+want+to+know+about+' + encodeURIComponent(course.full);
+
+    const overlay = document.getElementById('coursePopup');
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    // Always start popup from top
+    const body = document.getElementById('popupBody');
+    if (body) body.scrollTop = 0;
+    const popup = document.querySelector('.course-popup');
+    if (popup) popup.scrollTop = 0;
+  }
+
+  function closePopup() {
+    const overlay = document.getElementById('coursePopup');
+    if (overlay) {
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    currentCourseId = null;
+  }
+
+  // Close popup on overlay click
+  document.getElementById('coursePopup').addEventListener('click', function(e) {
+    if (e.target === this) closePopup();
+  });
+
+  /* ===== INIT ===== */
+  ['teaching','it','management','medical'].forEach(renderCards);
+  </script>
+</body>
+</html>

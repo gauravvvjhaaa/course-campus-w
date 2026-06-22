@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Campus - Learn. Grow. Succeed</title>
+  <meta name="description" content="Course Campus - Recognized Distance Education &amp; Consultation Centre in Sangam Vihar, New Delhi. NIOS, IGNOU, Distance Degrees, Regular College Admissions. Learn. Grow. Succeed.">
+  <meta name="keywords" content="NIOS admission Delhi, IGNOU, distance education, college admission guidance, Sangam Vihar, teacher training, course campus">
+  <meta property="og:title" content="Course Campus - Learn. Grow. Succeed">
+  <meta property="og:description" content="Your trusted consultation centre for education guidance in New Delhi.">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" style="font-size:16px;justify-content:space-between;align-items:center;flex-direction:row;">
+    <div class="navbar-logo">
+      <a href="index.html"><img src="assets/logo.png" alt="Course Campus" height="60"></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="nios.html">NIOS Support</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="career.html">Career Guidance</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="navbar-right">
+      <a href="https://www.youtube.com/@coursecampusedu" target="_blank" rel="noopener noreferrer" class="nav-social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/coursecampusedu" target="_blank" rel="noopener noreferrer" class="nav-social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <button class="btn-apply" onclick="openApplyModal()">Apply Now</button>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()" style="font-weight:normal;">&#9776;</button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="nav-mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="nios.html">NIOS Support</a>
+    <a href="courses.html">Courses</a>
+    <a href="faq.html">FAQ</a>
+    <a href="career.html">Career Guidance</a>
+    <a href="contact.html">Contact</a>
+    <a href="#" class="btn-apply-mobile" onclick="openApplyModal(); return false;">Apply Now</a>
+  </div>
+
+  <!-- PAGE WRAPPER -->
+  <div class="page-wrapper" style="padding-top: 0;">
+
+    <main class="main-content">
+
+      <!-- ===== 1. HERO SECTION ===== -->
+      <section class="hero">
+        <div class="hero-inner">
+          <!-- Left Content -->
+          <div class="hero-left">
+            <div class="hero-badge" style="padding-left:15px;padding-right:15px;">
+              <span class="dot"></span>
+              Admissions Open 2025–2026
+            </div>
+
+            <h1 class="hero-title">
+              Admission
+              <span class="line-accent">Open</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              Recognized Distance Education Information Centre — guiding students across Delhi through NIOS, IGNOU, D.El.Ed, and university degree programs.
+            </p>
+
+            <p class="hero-motivational">Make Your Career Unstoppable</p>
+
+            <div class="hero-ctas">
+              <button class="btn-hero-primary" onclick="openApplyModal()">
+                🎓 Apply Now
+              </button>
+              <a href="contact.html" class="btn-hero-outline">
+                📞 Get Free Counseling
+              </a>
+            </div>
+
+            <!-- Trust indicators -->
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 8px;">
+              <div style="display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: var(--muted);">
+                <span style="color: var(--accent);">✓</span> NIOS Certified Centre
+              </div>
+              <div style="display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: var(--muted);">
+                <span style="color: var(--accent);">✓</span> IGNOU Study Centre
+              </div>
+              <div style="display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: var(--muted);">
+                <span style="color: var(--accent);">✓</span> 9+ Years Experience
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Hero Image -->
+          <div class="hero-right">
+            <div class="hero-image-wrap">
+              <img src="assets/class1.jpg" alt="Students learning at Course Campus" loading="eager">
+              <div class="hero-image-badge">
+                <span class="badge-icon">🏆</span>
+                <div class="badge-text">
+                  <strong>Trusted by 1000+ Students</strong>
+                  <span>Sangam Vihar, New Delhi</span>
+                </div>
+              </div>
+            </div>
+            <div class="hero-float-card">
+              <div class="card-num">9+</div>
+              <div class="card-label">Years of Excellence</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== STATS BAR ===== -->
+      <div class="stats-bar fade-in">
+        <div class="stats-inner">
+          <div class="stat-item">
+            <div class="stat-num" data-target="1000">0+</div>
+            <div class="stat-label">Students Enrolled</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">9+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">5+</div>
+            <div class="stat-label">Partner Universities</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Admission Assistance</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== ANNOUNCEMENT BAR ===== -->
+      <div class="announcement-bar">
+        <div class="announcement-track">
+          🎓 Admissions Open 2026 &nbsp;|&nbsp;
+          📚 NIOS 10th &amp; 12th Enrollment Active &nbsp;|&nbsp;
+          🏫 D.El.Ed 2026-2028 Batch Starting &nbsp;|&nbsp;
+          📞 Free Counseling: 8285919263 &nbsp;|&nbsp;
+          ✅ Merit Scholarships Available &nbsp;|&nbsp;
+          🎓 Admissions Open 2026 &nbsp;|&nbsp;
+          📚 NIOS 10th &amp; 12th Enrollment Active &nbsp;|&nbsp;
+          🏫 D.El.Ed 2026-2028 Batch Starting &nbsp;|&nbsp;
+          📞 Free Counseling: 8285919263 &nbsp;|&nbsp;
+        </div>
+      </div>
+
+      <!-- ===== 2. SERVICES CARDS ===== -->
+      <section class="services-section">
+        <div class="section-header fade-in">
+          <div class="section-label">What We Offer</div>
+          <h2 class="section-title">Our <span>Programs</span></h2>
+          <p class="section-sub">From school completion to university degrees — we guide every step of your academic journey.</p>
+        </div>
+
+        <div class="services-grid">
+          <a href="nios.html" class="service-card fade-in fade-in-delay-1">
+            <div class="service-icon">📖</div>
+            <h3>NIOS Admission</h3>
+            <p>10th & 12th board support for failed and dropout students. Flexible exam options with full guidance.</p>
+            <span class="service-link">Learn More →</span>
+          </a>
+
+          <a href="nios.html" class="service-card fade-in fade-in-delay-2">
+            <div class="service-icon">🎓</div>
+            <h3>IGNOU Assistance</h3>
+            <p>Complete support for IGNOU enrollment, assignments, study materials, and examination guidance.</p>
+            <span class="service-link">Learn More →</span>
+          </a>
+
+          <a href="courses.html" class="service-card fade-in fade-in-delay-3">
+            <div class="service-icon">🎓</div>
+            <h3>Regular College Degree</h3>
+            <p>B.A., B.Com, B.Sc admission guidance from government-affiliated colleges. Full support for application, documents & fee.</p>
+            <span class="service-link">Learn More →</span>
+          </a>
+
+          <a href="courses.html" class="service-card fade-in fade-in-delay-4">
+            <div class="service-icon">🏛️</div>
+            <h3>Distance Universities</h3>
+            <p>B.Ed, B.A., BBA, BCA, LL.B, MBA, MCA, M.Com — UG & PG programs from recognized universities.</p>
+            <span class="service-link">Learn More →</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ===== STATS STRIP ===== -->
+      <div class="stats-strip" style="margin: 0 5% 0;">
+        <div class="stat-item">
+          <span class="stat-number" style="text-align:left;">1000</span>
+          <span class="stat-plus">+</span>
+          <span class="stat-label">Students Guided</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">9</span>
+          <span class="stat-plus">+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">5</span>
+          <span class="stat-plus">+</span>
+          <span class="stat-label">Partner Universities</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">100</span>
+          <span class="stat-plus">%</span>
+          <span class="stat-label">Admission Assistance</span>
+        </div>
+      </div>
+
+      <!-- ===== 3. UNIVERSITY PARTNERS STRIP ===== -->
+      <section class="university-section">
+        <div class="section-header fade-in" style="margin-bottom: 36px;">
+          <div class="section-label">Recognized Partners</div>
+          <h2 class="section-title">Our <span>University Partners</span></h2>
+        </div>
+
+        <div class="uni-grid fade-in fade-in-delay-1">
+          <div class="uni-badge">
+            <div class="uni-logo-placeholder">🏫</div>
+            <div class="uni-name">Amity University</div>
+          </div>
+          <div class="uni-badge">
+            <div class="uni-logo-placeholder">🎓</div>
+            <div class="uni-name">Manipal University Jaipur</div>
+          </div>
+          <div class="uni-badge">
+            <div class="uni-logo-placeholder">📚</div>
+            <div class="uni-name">Karnataka State Open University</div>
+          </div>
+          <div class="uni-badge">
+            <div class="uni-logo-placeholder">🏆</div>
+            <div class="uni-name">Shobhit University</div>
+          </div>
+        </div>
+        <p class="uni-more-text fade-in fade-in-delay-2"><em style="background-color:var(--card);">And many more top universities and colleges available. Contact us for the complete list and admission guidance.</em></p>
+      </section>
+
+      <!-- ===== 4. WHY CHOOSE US ===== -->
+      <section class="why-section">
+        <div class="section-header fade-in">
+          <div class="section-label">Why Course Campus</div>
+          <h2 class="section-title">Your Success is <span>Our Mission</span></h2>
+          <p class="section-sub">We don't just enroll students — we guide them every step of the way to academic and career success.</p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card fade-in">
+            <div class="why-icon">⭐</div>
+            <div>
+              <h4>Experienced Faculty</h4>
+              <p>Expert teachers with university-level qualifications and years of practical teaching experience.</p>
+            </div>
+          </div>
+          <div class="why-card fade-in fade-in-delay-1">
+            <div class="why-icon">🎯</div>
+            <div>
+              <h4>Career Counseling</h4>
+              <p>Personalized career roadmaps and one-on-one counseling sessions to help you choose the right path.</p>
+            </div>
+          </div>
+          <div class="why-card fade-in fade-in-delay-2">
+            <div class="why-icon">📚</div>
+            <div>
+              <h4>Flexible Learning</h4>
+              <p>Morning, evening and weekend batches — designed to fit your schedule without disrupting daily life.</p>
+            </div>
+          </div>
+          <div class="why-card fade-in fade-in-delay-1">
+            <div class="why-icon">🏆</div>
+            <div>
+              <h4>Recognized Programs</h4>
+              <p>All courses are government-approved and recognized by NIOS, IGNOU, and partner universities.</p>
+            </div>
+          </div>
+          <div class="why-card fade-in fade-in-delay-2">
+            <div class="why-icon">🕐</div>
+            <div>
+              <h4>Regular Classes</h4>
+              <p>Structured classroom sessions with study materials, assignments, and mock tests included.</p>
+            </div>
+          </div>
+          <div class="why-card fade-in fade-in-delay-3">
+            <div class="why-icon">✅</div>
+            <div>
+              <h4>100% Assistance</h4>
+              <p>End-to-end support — from admission forms to exam results. We stay with you throughout the journey.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== HOW IT WORKS ===== -->
+      <section class="how-it-works">
+        <div class="section-header fade-in">
+          <div class="section-label">Simple Process</div>
+          <h2 class="section-title">How It <span>Works</span></h2>
+          <p class="section-sub">Your journey to education in 4 easy steps</p>
+        </div>
+        <div class="steps-row">
+          <div class="step-card fade-in">
+            <div class="step-number">1</div>
+            <div class="step-icon">📞</div>
+            <h3>Free Consultation</h3>
+            <p>Call or visit us for a free one-on-one session where we understand your goals.</p>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step-card fade-in fade-in-delay-1">
+            <div class="step-number">2</div>
+            <div class="step-icon">🎯</div>
+            <h3>Course Selection</h3>
+            <p>We help you choose the best program — NIOS, IGNOU, distance degree, or regular college.</p>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step-card fade-in fade-in-delay-2">
+            <div class="step-number">3</div>
+            <div class="step-icon">📝</div>
+            <h3>Enrollment Support</h3>
+            <p>We handle all paperwork, forms, and document submission so you don't have to worry.</p>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step-card fade-in fade-in-delay-3">
+            <div class="step-number">4</div>
+            <div class="step-icon">🎓</div>
+            <h3>Get Your Degree</h3>
+            <p>Study at your own pace and receive a government-recognized certificate or degree.</p>
+          </div>
+        </div>
+        <div class="steps-cta">
+          <button class="btn-hero-primary" onclick="document.getElementById('modal-overlay').classList.add('open')">
+            Start Today — It's Free 🚀
+          </button>
+        </div>
+      </section>
+
+      <!-- ===== 5. FACULTY SECTION ===== -->
+      <section class="faculty-section">
+        <div class="section-header fade-in">
+          <div class="section-label">Meet Our Expert</div>
+          <h2 class="section-title">Learn from the <span>Best</span></h2>
+        </div>
+
+        <div class="faculty-inner">
+          <!-- Faculty Card -->
+          <div class="faculty-card fade-in">
+            <div class="faculty-photo-wrap">
+              <img src="assets/ashu-sir.jpg" alt="Ashu Sir — Founder, Course Campus" class="faculty-photo">
+            </div>
+            <div class="faculty-badge">Expert Counselor</div>
+            <div class="faculty-name">Ashu Sir</div>
+
+            <div class="faculty-qual">
+              <div class="qual-item">M.A. English — Jamia Millia Islamia</div>
+              <div class="qual-item">B.A. English (Hons.) — Dyal Singh College, University of Delhi</div>
+              <div class="qual-item">Former NIOS Coordinator</div>
+            </div>
+
+            <div class="faculty-stats">
+              <div class="fac-stat">
+                <div class="fac-num">9+</div>
+                <div class="fac-label">Years Exp.</div>
+              </div>
+              <div class="fac-stat">
+                <div class="fac-num">1000+</div>
+                <div class="fac-label">Students Guided</div>
+              </div>
+              <div class="fac-stat">
+                <div class="fac-num">100%</div>
+                <div class="fac-label">Dedication</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Faculty Description -->
+          <div class="faculty-text fade-in fade-in-delay-1">
+            <h3>The <span>Driving Force</span> Behind Course Campus</h3>
+            <p>Ashu Sir is the founder and lead counselor of Course Campus with over 9 years of experience in the field of distance and open education. His deep understanding of NIOS, IGNOU, and university programs has helped over a thousand students restart and rebuild their academic journeys.</p>
+            <p>As a former NIOS Coordinator, he brings unparalleled expertise in navigating the open schooling system — from subject selection to form-filling, exam scheduling, and result follow-up.</p>
+
+            <div class="faculty-points">
+              <div class="fac-point">
+                <span class="check">✓</span>
+                Specialist in NIOS 10th &amp; 12th admission and subject selection
+              </div>
+              <div class="fac-point">
+                <span class="check">✓</span>
+                Expert in IGNOU enrollment, assignments and exams
+              </div>
+              <div class="fac-point">
+                <span class="check">✓</span>
+                Guides students for D.El.Ed and teacher training programs
+              </div>
+              <div class="fac-point">
+                <span class="check">✓</span>
+                Personalized career roadmapping for every student
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PHOTO GALLERY ===== -->
+      <section class="gallery-section">
+        <div class="section-header fade-in">
+          <div class="section-label">Our Campus Life</div>
+          <h2 class="section-title">See the <span>Learning in Action</span></h2>
+          <p class="section-sub">Real classrooms, real students, real results. This is where futures are built.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item fade-in">
+            <img src="assets/class3.jpg" alt="Students at desks — Change Your Mindset" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-caption">Live classroom energy</span>
+            </div>
+          </div>
+          <div class="gallery-item fade-in fade-in-delay-1">
+            <img src="assets/class1.jpg" alt="Teacher addressing full classroom" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-caption">Engaging lectures by experts</span>
+            </div>
+          </div>
+          <div class="gallery-item fade-in fade-in-delay-2">
+            <img src="assets/class5.jpg" alt="Students writing in notebooks" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-caption">Students focused & learning</span>
+            </div>
+          </div>
+          <div class="gallery-item fade-in fade-in-delay-1">
+            <img src="assets/class2.jpg" alt="Full classroom of students studying" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-caption">Packed classroom, real results</span>
+            </div>
+          </div>
+          <div class="gallery-item fade-in fade-in-delay-2">
+            <img src="assets/class7.jpg" alt="Students in collaborative circle" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-caption">Collaborative learning sessions</span>
+            </div>
+          </div>
+          <div class="gallery-item fade-in fade-in-delay-3">
+            <img src="assets/class6.jpg" alt="Teacher at whiteboard — Let's Learn Together" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-caption">Let's learn together</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 6. BOTTOM CTA BANNER ===== -->
+      <section class="cta-banner">
+        <h2 class="fade-in">Stop Wasting Years. <span>Restart Your Education</span> Today.</h2>
+        <p class="fade-in fade-in-delay-1">Thousands of students have transformed their lives with Course Campus. Your turn starts now.</p>
+
+        <div class="cta-actions fade-in fade-in-delay-2">
+          <button class="btn-hero-primary" onclick="openApplyModal()" style="font-size: 1rem; padding: 16px 36px;">
+            🎓 Apply Now — It's Free
+          </button>
+        </div>
+
+        <div class="cta-phones fade-in fade-in-delay-3">
+          <a href="tel:+918285919263" class="cta-phone">
+            <span class="phone-icon">📞</span>
+            +91 82859 19263
+          </a>
+          <a href="tel:+919310227258" class="cta-phone">
+            <span class="phone-icon">📞</span>
+            +91 93102 27258
+          </a>
+          <a href="tel:+917292007680" class="cta-phone">
+            <span class="phone-icon">📞</span>
+            +91 72920 07680
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="assets/logo.png" alt="Course Campus" height="40">
+          </div>
+          <div class="footer-tagline">Learn. Grow. Succeed</div>
+          <div class="footer-contact">
+            <p>📍 316/11 Shani Bazar, Bandh Road,<br>Sangam Vihar, New Delhi 110080</p>
+          </div>
+          <div class="footer-phones" style="margin-top:14px;">
+            <a href="tel:+918285919263">+91 82859 19263</a>
+            <a href="tel:+919310227258">+91 93102 27258</a>
+            <a href="tel:+917292007680">+91 72920 07680</a>
+          </div>
+          <div class="footer-social">
+            <a href="https://www.youtube.com/@coursecampusedu" target="_blank" rel="noopener noreferrer" class="social-link social-yt"><i class="fab fa-youtube"></i><span>YouTube</span></a>
+            <a href="https://www.instagram.com/coursecampusedu" target="_blank" rel="noopener noreferrer" class="social-link social-ig"><i class="fab fa-instagram"></i><span>Instagram</span></a>
+            <a href="https://wa.me/918285919263" target="_blank" rel="noopener noreferrer" class="social-link social-wa"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="nios.html">NIOS Support</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">More</div>
+          <ul class="footer-links">
+            <li><a href="career.html">Career Guidance</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Course Campus. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- BOTTOM NAVIGATION (Mobile) -->
+  <nav class="bottom-nav">
+    <a href="index.html" class="bottom-nav-item">
+      <span class="nav-icon">🏠</span><span>Home</span>
+    </a>
+    <a href="nios.html" class="bottom-nav-item">
+      <span class="nav-icon">📚</span><span>NIOS</span>
+    </a>
+    <a href="courses.html" class="bottom-nav-item">
+      <span class="nav-icon">📊</span><span>Courses</span>
+    </a>
+    <a href="faq.html" class="bottom-nav-item">
+      <span class="nav-icon">❓</span><span>FAQ</span>
+    </a>
+    <a href="contact.html" class="bottom-nav-item">
+      <span class="nav-icon">☎️</span><span>Contact</span>
+    </a>
+  </nav>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/918285919263?text=Hi%2C%20I%20want%20to%20know%20more%20about%20courses%20at%20Course%20Campus"
+     class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Back to top">↑</button>
+
+
+  <script src="js/main.js"></script>
+
+  <script>
+    /* ---- Responsive tweaks for homepage hero ---- */
+    function adjustHeroForMobile() {
+      const heroInner = document.querySelector('.hero-inner');
+      if (!heroInner) return;
+      if (window.innerWidth <= 768) {
+        heroInner.style.gridTemplateColumns = '1fr';
+        heroInner.style.padding = '40px 5% 60px';
+        heroInner.style.gap = '32px';
+        const heroImage = document.querySelector('.hero-image-wrap img');
+        if (heroImage) heroImage.style.height = '260px';
+        const floatCard = document.querySelector('.hero-float-card');
+        if (floatCard) floatCard.style.display = 'none';
+      } else {
+        heroInner.style.gridTemplateColumns = '1fr 1fr';
+        heroInner.style.padding = '80px 5%';
+        heroInner.style.gap = '60px';
+        const heroImage = document.querySelector('.hero-image-wrap img');
+        if (heroImage) heroImage.style.height = '480px';
+        const floatCard = document.querySelector('.hero-float-card');
+        if (floatCard) floatCard.style.display = 'block';
+      }
+    }
+    adjustHeroForMobile();
+    window.addEventListener('resize', adjustHeroForMobile);
+
+    /* ---- Animated counter ---- */
+    function animateCounter(el, target, suffix) {
+      let start = 0;
+      const duration = 1800;
+      const step = (timestamp) => {
+        if (!start) start = timestamp;
+        const progress = Math.min((timestamp - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.floor(eased * target) + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    }
+
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const statNums = document.querySelectorAll('.stat-num');
+          statNums[0] && animateCounter(statNums[0], 1000, '+');
+          statsObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.5 });
+
+    const statsBar = document.querySelector('.stats-bar');
+    if (statsBar) statsObserver.observe(statsBar);
+  </script>
+</body>
+</html>
